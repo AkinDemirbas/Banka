@@ -1,0 +1,33 @@
+Bu projede Java ile konsol tabanlı bir banka yönetim uygulaması geliştirdim. Proje Maven tabanlıdır ve dosya yapısı aşağıdaki gibidir:
+
+banka-db.mv.db / banka-db.trace.db
+H2 veritabanı dosyaları. Uygulama çalışınca otomatik oluşuyor, veriler burada tutuluyor.
+
+pom.xml
+Maven yapılandırma dosyası. Gerekli bağımlılıklar (ör: H2) burada tanımlı.
+
+src/main/java/com/banka/
+Tüm Java kaynak kodları burada.
+
+App.java
+Uygulamanın ana dosyası. Konsoldan menü ile işlemler burada yönetiliyor.
+
+model/
+
+Musteri.java: Müşteri bilgileri için model sınıfı
+Hesap.java: Hesap bilgileri için model
+Hareket.java: Hesap hareketleri için model
+Banka.java: Banka ile ilgili temel işlemler
+repository/
+
+MusteriRepository.java: Müşteri ile ilgili veritabanı işlemleri
+HesapRepository.java: Hesap ile ilgili veritabanı işlemleri
+HareketRepository.java: Hareket ile ilgili veritabanı işlemleri
+service/
+
+BankaService.java: İş mantığı burada. Hesap açma, para yatırma, çekme, transfer gibi işlemler.
+target/
+Derlenmiş (class) dosyaları burada. Maven ile build edince oluşuyor.
+
+Kısacası, kodlar banka altında, veritabanı dosyaları ana klasörde, derleme çıktıları ise target klasöründe bulunuyor.
+Her şey düzenli ve anlaşılır şekilde ayrıldı.
